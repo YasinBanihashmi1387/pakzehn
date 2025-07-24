@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پاک ذهن - ترک خودارضایی و پورن</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+        
+        .login-modal, .register-modal {
+            transition: all 0.3s ease;
+        }
+        
+        .modal-active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .logopak{
+            width: 50px;
+            border-radius: 100%;
+        }
+
+        #Aboutus{
+        
+         width: 50%;
+
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <img src="assets/لوگو اصلی.jpg" class="logopak"></img>
+                    <h1 class="text-2xl font-bold">پاک ذهن</h1>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8 space-x-reverse">
+                        <li><a href="#" class="nav-link text-white hover:text-blue-200 transition">خانه</a></li>
+                        <li><a href="#about" class="nav-link text-white hover:text-blue-200 transition">درباره ما</a></li>
+                        <li><a href="#courses" class="nav-link text-white hover:text-blue-200 transition">دوره‌ها</a></li>
+                        <li><a href="#services" class="nav-link text-white hover:text-blue-200 transition">خدمات</a></li>
+                        <li><a href="#contact" class="nav-link text-white hover:text-blue-200 transition">تماس با ما</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="flex items-center space-x-4 space-x-reverse">
+                  <a href="فرم.html">  <button onclick="openLoginModal()" class="bg-white text-blue-800 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition">ورود/ثبت نام</button>
+                    <button class="md:hidden text-2xl" onclick="toggleMobileMenu()"> </a>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#" class="block py-2 text-white hover:text-blue-200">خانه</a></li>
+                    <li><a href="#about" class="block py-2 text-white hover:text-blue-200">درباره ما</a></li>
+                    <li><a href="#courses" class="block py-2 text-white hover:text-blue-200">دوره‌ها</a></li>
+                    <li><a href="#services" class="block py-2 text-white hover:text-blue-200">خدمات</a></li>
+                    <li><a href="#contact" class="block py-2 text-white hover:text-blue-200">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">رهایی از اعتیاد به پورن و خودارضایی</h2>
+                <p class="text-xl mb-8 leading-relaxed">با دوره‌های تخصصی پاک ذهن، زندگی سالم‌تر و موفق‌تری را تجربه کنید. ما به شما کمک می‌کنیم تا از این اعتیاد خلاص شوید و کنترل کامل زندگی خود را به دست بگیرید.</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#courses" class="bg-white text-blue-800 px-6 py-3 rounded-lg font-bold hover:bg-blue-100 transition">مشاهده دوره‌ها</a>
+                    <a href="#about" class="border border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">درباره ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="assets/لوگو اصلی سه بعدی.jpg" alt="Mind Freedom" class="rounded-xl shadow-2xl max-w-full h-auto" style="max-height: 400px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">درباره پاک ذهن</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">چرا پاک ذهن؟</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">پاک ذهن با تیمی از متخصصان روانشناسی و مربیان ترک اعتیاد، راهکارهای علمی و عملی برای رهایی از اعتیاد به پورن و خودارضایی ارائه می‌دهد. ما معتقدیم هر فردی می‌تواند با ابزارهای مناسب و حمایت صحیح، این چالش را پشت سر بگذارد.</p>
+                    <p class="text-gray-700 leading-relaxed">روش‌های ما بر پایه آخرین تحقیقات علمی در زمینه روانشناسی اعتیاد و تغییر عادت‌ها طراحی شده‌اند و تاکنون به هزاران نفر کمک کرده‌اند.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img id="Aboutus" src="assets/لوگو سه بعدی خفن.jpg" alt="About Us" class="rounded-xl shadow-lg w-full">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md">
+                    <div class="text-blue-700 text-3xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-800">متخصصان مجرب</h4>
+                    <p class="text-gray-700">تیم ما از روانشناسان و مربیان با تجربه در زمینه ترک اعتیاد تشکیل شده است.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md">
+                    <div class="text-blue-700 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-800">روش‌های علمی</h4>
+                    <p class="text-gray-700">برنامه‌های ما بر اساس آخرین تحقیقات علمی در زمینه روانشناسی اعتیاد طراحی شده‌اند.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md">
+                    <div class="text-blue-700 text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-800">جامعه حمایتی</h4>
+                    <p class="text-gray-700">با عضویت در پاک ذهن، به جامعه‌ای از افراد هم‌هدف متصل می‌شوید.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">دوره‌های پاک ذهن</h2>
+            <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">دوره‌های تخصصی ما به شما کمک می‌کنند تا قدم به قدم از این اعتیاد رها شوید و زندگی سالم‌تری داشته باشید.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">دوره مقدماتی</h3>
+                        <p class="text-gray-700 mb-4">شروع سفر به سوی زندگی پاک و آزاد از اعتیاد</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>آشنایی با مکانیسم‌های اعتیاد</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>روش‌های کنترل اولیه</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>۷ روز محتوای آموزشی</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-700">۱۹۹,۰۰۰ تومان</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">خرید دوره</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 (Featured) -->
+                <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 transform scale-105 relative">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">پرفروش</div>
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">دوره جامع</h3>
+                        <p class="text-gray-700 mb-4">رهایی کامل در ۳۰ روز با پشتیبانی تخصصی</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>برنامه ۳۰ روزه ترک کامل</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>پشتیبانی روزانه توسط مربی</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>گروه حمایتی اختصاصی</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>مشاوره فردی (۲ جلسه)</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">۴۹۹,۰۰۰ تومان</span>
+                                <span class="text-xl font-bold text-blue-700 block">۳۹۹,۰۰۰ تومان</span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">خرید دوره</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-infinity text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-800">عضویت ویژه</h3>
+                        <p class="text-gray-700 mb-4">دسترسی نامحدود به تمام دوره‌ها و خدمات</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>تمام دوره‌های فعلی و آینده</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>پشتیبانی اختصاصی</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>جلسات ماهانه گروهی</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 ml-2"></i>
+                                <span>مشاوره فردی (ماهیانه)</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-700">۹۹,۰۰۰ تومان <span class="text-sm">/ ماه</span></span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">عضویت</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12
+</html>

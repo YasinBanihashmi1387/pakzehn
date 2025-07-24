@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی پاک ذهن | ترک خودارضایی و پورن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #1e3a8a;
+            margin-top: 2px;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f0f4f8 100%);
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold text-xl">پ</div>
+                <h1 class="mr-3 text-xl font-bold text-blue-900">آکادمی پاک ذهن</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" class="nav-link text-blue-900 font-medium">خانه</a>
+                <a href="#about" class="nav-link text-blue-900 font-medium">درباره ما</a>
+                <a href="#services" class="nav-link text-blue-900 font-medium">خدمات ما</a>
+                <a href="#courses" class="nav-link text-blue-900 font-medium">دوره ها</a>
+                <a href="#contact" class="nav-link text-blue-900 font-medium">تماس با ما</a>
+            </nav>
+            
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="#courses" class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-lg font-medium transition duration-300">خرید دوره</a>
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-blue-900 font-medium py-2 border-b">خانه</a>
+                <a href="#about" class="text-blue-900 font-medium py-2 border-b">درباره ما</a>
+                <a href="#services" class="text-blue-900 font-medium py-2 border-b">خدمات ما</a>
+                <a href="#courses" class="text-blue-900 font-medium py-2 border-b">دوره ها</a>
+                <a href="#contact" class="text-blue-900 font-medium py-2 border-b">تماس با ما</a>
+            </div>
+        </div>
+    </header><!-- Hero Section -->
+    <section id="home" class="hero-section text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">مسیر رسیدن به آرامش درونی را با ما آغاز کنید</h1>
+                <p class="text-lg mb-8 opacity-90">آکادمی پاک ذهن با ارائه دوره های تخصصی ذهن آگاهی و مدیتیشن، به شما کمک می‌کند تا به آرامش پایدار و زندگی متعادل دست یابید.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                    <a href="#courses" class="bg-white text-blue-900 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold text-center transition duration-300">مشاهده دوره ها</a>
+                    <a href="#about" class="border-2 border-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-bold text-center transition duration-300">درباره ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="مدیتیشن و آرامش" class="rounded-xl shadow-2xl w-full max-w-md">
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">درباره آکادمی پاک ذهن</h2>
+                <div class="w-20 h-1 bg-blue-800 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="درباره آکادمی پاک ذهن" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">رسالت ما در آکادمی پاک ذهن</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">آکادمی پاک ذهن با هدف ارتقای کیفیت زندگی افراد از طریق آموزش تکنیک‌های ذهن آگاهی و مدیتیشن تأسیس شده است. ما معتقدیم هر فردی می‌تواند با یادگیری مهارت‌های مناسب به آرامش درونی و تعادل روانی دست یابد.</p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">تیم ما متشکل از روانشناسان، مربیان مدیتیشن و متخصصان توسعه فردی است که سال‌ها تجربه در زمینه آموزش تکنیک‌های کاهش استرس و افزایش تمرکز دارند.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-medal text-blue-900"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">تخصص و تجربه</h4>
+                                <p class="text-gray-600 text-sm">10 سال سابقه درخشان در آموزش</p>
+                            </div></div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-users text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">جامعه بزرگ</h4>
+                                    <p class="text-gray-600 text-sm">5000+ دانشجوی راضی</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-book-open text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">محتوای جامع</h4>
+                                    <p class="text-gray-600 text-sm">50+ ساعت آموزش تخصصی</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-headset text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">پشتیبانی دائمی</h4>
+                                    <p class="text-gray-600 text-sm">پشتیبانی 24/7 برای دانشجویان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">خدمات ما</h2>
+                    <div class="w-20 h-1 bg-blue-800 mx-auto"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-brain text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-blue-900 mb-4">ذهن آگاهی</h3>
+                        <p class="text-gray-700 text-center">آموزش تکنیک‌های ذهن آگاهی برای افزایش تمرکز، کاهش استرس و بهبود کیفیت زندگی روزمره</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-spa text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-blue-900 mb-4">مدیتیشن هدایت شده</h3>
+                        <p class="text-gray-700 text-center">جلسات مدیتیشن هدایت شده برای دستیابی به آرامش عمیق و تعادل روانی</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-chalkboard-teacher text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-blue-900 mb-4">مشاوره تخصصی</h3>
+                        <p class="text-gray-700 text-center">مشاوره فردی و گروهی با متخصصان روانشناسی برای حل چالش‌های ذهنی و عاطفی</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Courses Section -->
+        <section id="courses" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">دوره های آموزشی</h2>
+                    <div class="w-20 h-1 bg-blue-800 mx-auto"></div>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">دوره‌های تخصصی ما برای تمام سطوح از مبتدی تا پیشرفته طراحی شده‌اند</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Course 1 -->
+                    <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1520&q=80" alt="دوره مقدماتی ذهن آگاهی" class="w-full h-48 object-cover">
+                            <div class="absolute top-3 left-3 bg-blue-900 text-white px-3 py-1 rounded-full text-sm">جدید</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs">مبتدی</span>
+                                <span class="text-gray-500 text-sm"><i class="far fa-clock ml-1"></i> 8 هفته</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900 mb-3">دوره مقدماتی ذهن آگاهی</h3>
+                            <p class="text-gray-600 mb-4">آموزش اصول اولیه ذهن آگاهی برای کاهش استرس و افزایش تمرکز در زندگی روزمره</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-blue-900 font-bold">1,290,000 تومان</span>
+                                <a href="#" class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm transition duration-300">ثبت نام</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course 2 -->
+                    <div class="course-card bg-white rounded-xl shadow
+    </html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پاک ذهن - ورود و ثبت نام</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    @font-face {
+        font-family: yasin;
+        src: url(yekan3.ttf);
+    }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: yasin;
+            background: linear-gradient(135deg, #0a2463, #3e92cc);
+        }
+        
+        .form-container {
+            perspective: 1000px;
+        }
+        
+        .form-box {
+            transform-style: preserve-3d;
+            transition: all 0.8s ease;
+        }
+        
+        .form-box.flipped {
+            transform: rotateY(180deg);
+        }
+        
+        .form-front, .form-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .form-back {
+            transform: rotateY(180deg);
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-group input {
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            box-shadow: 0 0 10px rgba(62, 146, 204, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #0a2463, #3e92cc);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+        
+        .flip-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .flip-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="form-container w-full max-w-md">
+        <div class="form-box relative w-full h-[550px]">
+            <!-- Front Side - Login Form -->
+            <div class="form-front bg-white rounded-xl shadow-2xl overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#0a2463]">ورود به پاک ذهن</h2>
+                    <p class="text-gray-600 mt-2">برای دسترسی به دوره‌های انحصاری وارد شوید</p>
+                </div>
+                
+                <form id="loginForm" class="space-y-6">
+                    <div class="input-group">
+                        <label for="loginUsername" class="block text-sm font-medium text-gray-700 mb-1">نام کاربری</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-user text-[#3e92cc]"></i>
+                            </div>
+                            <input type="text" id="loginUsername" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="نام کاربری خود را وارد کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">رمز عبور</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-lock text-[#3e92cc]"></i>
+                            </div>
+                            <input type="password" id="loginPassword" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="رمز عبور خود را وارد کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="rememberMe" type="checkbox" class="h-4 w-4 text-[#3e92cc] focus:ring-[#3e92cc] border-gray-300 rounded">
+                            <label for="rememberMe" class="mr-2 block text-sm text-gray-700">مرا به خاطر بسپار</label>
+                        </div>
+                        <a href="#" class="text-sm text-[#3e92cc] hover:underline">رمز عبور را فراموش کرده‌اید؟</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-bold shadow-lg">
+                        ورود به حساب کاربری
+                    </button>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-gray-600">حساب کاربری ندارید؟ 
+                            <button type="button" onclick="flipForm()" class="flip-btn text-[#0a2463] font-bold hover:underline">ثبت نام کنید</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Back Side - Register Form -->
+            <div class="form-back bg-white rounded-xl shadow-2xl overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#0a2463]">ثبت نام در پاک ذهن</h2>
+                    <p class="text-gray-600 mt-2">برای شروع سفر بهبود خود ثبت نام کنید</p>
+                </div>
+                
+                <form id="registerForm" class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="input-group">
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">نام</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <i class="fas fa-user text-[#3e92cc]"></i>
+                                </div>
+                                <input type="text" id="firstName" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="نام خود را وارد کنید" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">نام خانوادگی</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                    <i class="fas fa-user text-[#3e92cc]"></i>
+                                </div>
+                                <input type="text" id="lastName" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="نام خانوادگی خود را وارد کنید" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">شماره تلفن</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-phone text-[#3e92cc]"></i>
+                            </div>
+                            <input type="tel" id="phone" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="شماره تلفن خود را وارد کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="registerUsername" class="block text-sm font-medium text-gray-700 mb-1">نام کاربری</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-at text-[#3e92cc]"></i>
+                            </div>
+                            <input type="text" id="registerUsername" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="نام کاربری دلخواه خود را وارد کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="registerPassword" class="block text-sm font-medium text-gray-700 mb-1">رمز عبور</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-lock text-[#3e92cc]"></i>
+                            </div>
+                            <input type="password" id="registerPassword" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="رمز عبور قوی انتخاب کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">تکرار رمز عبور</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i class="fas fa-lock text-[#3e92cc]"></i>
+                            </div>
+                            <input type="password" id="confirmPassword" class="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3e92cc]" placeholder="رمز عبور را تکرار کنید" required>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input id="terms" type="checkbox" class="h-4 w-4 text-[#3e92cc] focus:ring-[#3e92cc] border-gray-300 rounded" required>
+                        <label for="terms" class="mr-2 block text-sm text-gray-700">با <a href="#" class="text-[#3e92cc] hover:underline">شرایط و قوانین</a> موافقم</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-bold shadow-lg">
+                        ثبت نام و شروع سفر
+                    </button>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-gray-600">قبلاً ثبت نام کرده‌اید؟ 
+                            <button type="button" onclick="flipForm()" class="flip-btn text-[#0a2463] font-bold hover:underline">وارد شوید</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipForm() {
+            const formBox = document.querySelector('.form-box');
+            formBox.classList.toggle('flipped');
+        }
+        
+        // Form submission handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your login logic here
+            alert('ورود با موفقیت انجام شد!');
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your registration logic here
+            alert('ثبت نام با موفقیت انجام شد!');
+        });
+    </script>
+</body>
+</html>

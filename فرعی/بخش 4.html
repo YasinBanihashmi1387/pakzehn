@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پاک ذهن - ترک خودارضایی و پورن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#1E40AF',
+                        accent: '#3B82F6',
+                        light: '#EFF6FF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-brain text-primary text-xl"></i>
+                    </div>
+                    <h1 class="text-xl font-bold">پاک ذهن</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link font-medium">صفحه اصلی</a>
+                    <a href="#about" class="nav-link font-medium">درباره ما</a>
+                    <a href="#courses" class="nav-link font-medium">دوره ها</a>
+                    <a href="#services" class="nav-link font-medium">خدمات</a>
+                    <a href="#contact" class="nav-link font-medium">تماس با ما</a>
+                </nav>
+                
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex space-x-3 space-x-reverse">
+                    <a href="#login" class="bg-white text-primary px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">ورود</a>
+                    <a href="#register" class="bg-accent text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-500 transition">ثبت نام</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="pt-4 pb-2 space-y-3">
+                    <a href="#home" class="block px-3 py-2 hover:bg-secondary rounded">صفحه اصلی</a>
+                    <a href="#about" class="block px-3 py-2 hover:bg-secondary rounded">درباره ما</a>
+                    <a href="#courses" class="block px-3 py-2 hover:bg-secondary rounded">دوره ها</a>
+                    <a href="#services" class="block px-3 py-2 hover:bg-secondary rounded">خدمات</a>
+                    <a href="#contact" class="block px-3 py-2 hover:bg-secondary rounded">تماس با ما</a>
+                    <div class="pt-2 border-t border-gray-600">
+                        <a href="#login" class="block px-3 py-2 hover:bg-secondary rounded">ورود</a>
+                        <a href="#register" class="block px-3 py-2 hover:bg-secondary rounded">ثبت نام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">رهایی از اعتیاد به پورن و خودارضایی</h2>
+                    <p class="text-lg mb-6 opacity-90">با دوره های تخصصی پاک ذهن، زندگی سالم و پرانرژی را تجربه کنید. ما به شما کمک می کنیم تا کنترل ذهن و بدن خود را دوباره به دست آورید.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#courses" class="bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">مشاهده دوره ها</a>
+                        <a href="#about" class="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition">درباره ما</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <div class="absolute w-56 h-56 md:w-72 md:h-72 bg-white bg-opacity-20 rounded-full"></div>
+                        <div class="absolute w-48 h-48 md:w-64 md:h-64 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-6xl md:text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">درباره پاک ذهن</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Pak Zehn" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-secondary mb-4">چرا پاک ذهن؟</h3>
+                    <p class="text-gray-700 mb-4">پاک ذهن با تیمی از متخصصان روانشناسی و مربیان با تجربه، برنامه ای جامع برای کمک به افراد در ترک اعتیاد به پورن و خودارضایی طراحی کرده است. ما معتقدیم که این اعتیاد می تواند تأثیرات منفی قابل توجهی بر زندگی فردی، روابط و عملکرد اجتماعی افراد داشته باشد.</p>
+                    <p class="text-gray-700 mb-6">رویکرد ما ترکیبی از تکنیک های روانشناسی شناختی-رفتاری، تمرینات ذهن آگاهی و پشتیبانی جامع است که به شما کمک می کند نه تنها از این عادت رها شوید، بلکه زندگی پرنشاط و سالمی را تجربه کنید.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mb-2">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary">روش های علمی</h4>
+                            <p class="text-sm text-gray-600">بر پایه آخرین تحقیقات علمی</p>
+                        </div>
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mb-2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary">پشتیبانی تیمی</h4>
+                            <p class="text-sm text-gray-600">تیم حرفه ای همیشه همراه شما</p>
+                        </div>
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mb-2">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary">محیط امن</h4>
+                            <p class="text-sm text-gray-600">حریم خصوصی کاملا محفوظ</p>
+                        </div>
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mb-2">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary">نتایج قابل اندازه گیری</h4>
+                            <p class="text-sm text-gray-600">پیشرفت شما قابل ردیابی است</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">دوره های آموزشی</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">دوره های تخصصی ما برای کمک به شما در مسیر رهایی طراحی شده اند</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                        <i class="fas fa-power-off text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-secondary">دوره پایه رهایی</h3>
+                            <span class="bg-primary text-white text-xs px-2 py-1 rounded">جدید</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">شروع سفر رهایی با اصول اولیه و تکنیک های کاربردی برای کنترل ذهن و رفتار</p>
+                        
+                        <div class="flex items-center text-yellow-500 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-600 text-sm mr-2">(۴.۷)</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">۲۹۰,۰۰۰ تومان</span>
+                                <span class="text-primary font-bold text-lg block">۱۹۹,۰۰۰ تومان</span>
+                            </div>
+                            <a href="#course1" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">خرید دوره</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-secondary">دوره پیشرفته کنترل ذهن</h3>
+                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">پرفروش</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">تکنیک های پیشرفته برای تسلط کامل بر ذهن و ایجاد عادات جدید سالم</p>
+                        
+                        <div class="flex items-center text-yellow-500 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(۵.۰)</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">۴۹۰,۰۰۰ تومان</span>
+                                <span class="text-primary font-bold text-lg block">۳۴۹,۰۰۰ تومان</span>
+                            </div>
+                            <a href="#course2" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">خرید دوره</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden course-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-secondary">دوره جامع همراهی</h3>
+                            <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">VIP</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">برنامه ۳ ماهه همراه با پشتیبانی روزانه، جلسات خصوصی و پیگیری پیشرفت</p>
+                        
+                        <div class="flex items-center text-yellow-500 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-gray-600 text-sm mr-2">(۴.۹)</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 line-through text-sm">۱,۲۹۰,۰۰۰ تومان</span>
+                                <span class="text-primary font-bold text-lg block">۹۹۹,۰۰۰ تومان</span>
+                            </div>
+                            <a href="#course3" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">خرید دوره</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#all-courses" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-bold hover:bg-primary hover:text-white transition">
+                    مشاهده همه دوره ها
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">خدمات ما</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما خدمات جامعی برای حمایت از شما در این مسیر ارائه می دهیم</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">مشاوره تخصصی</h3>
+                    <p class="text-gray-600">جلسات مشاوره فردی با متخصصان حوزه اعتیاد رفتاری و روانشناسان بالینی</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">جلسات گروهی</h3>
+                    <p class="text-gray-600">جلسات حمایتی گروهی با حضور افراد هم مسیر و تسهیلگران متخصص</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">اپلیکیشن همراه</h3>
+                    <p class="text-gray-600">برنامه تخصصی همراه با یادآورها، تمرینات و پیگیری پیشرفت شخصی</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">منابع آموزشی</h3>
+                    <p class="text-gray-600">کتابخانه جامع مقالات، کتاب ها و پادکست های تخصصی در این حوزه</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">پیگیری پیشرفت</h3>
+                    <p class="text-gray-600">سیستم هوشمند تحلیل و گزارش دهی پیشرفت شخصی شما</p>
+                </div>
+                
+                <div class="bg-light p-8 rounded-xl text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3">پشتیبانی ۲۴ ساعته</h3>
+                    <p class="text-gray-600">پشتیبانی تلفنی و آنلاین در تمام ساعات شبانه روز</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">تجربه شرکت کنندگان</h2>
+                <p class="opacity-90 max-w-2xl mx-auto">آنچه دیگران درباره پاک ذهن می گویند</p>
+                <div class="w-20 h-1 bg-white bg-opacity-50 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">علی محمدی</h4>
+                            <p class="text-sm opacity-80">شرکت کننده دوره پایه</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"بعد از سالها تلاش ناموفق، بالاخره با روش های علمی پاک ذهن توانستم این عادت مخرب را ترک کنم. الان بیش از ۶ ماه است که پاک هستم و زندگی کاملا متفاوتی دارم."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">مریم حسینی</h4>
+                            <p class="text-sm opacity-80">شرکت کننده دوره VIP</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"پشتیبانی تیم پاک ذهن واقعا بی نظیر بود. در لحظات سخت همیشه کسی بود که کمکم کند. الان نه تنها از این مشکل رها شده ام، بلکه اعتماد به نفس و انرژی بسیار بیشتری دارم."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div class="mr-3">
+                            <h4 class="font-bold">رضا کریمی</h4>
+                            <p class="text-sm opacity-80">شرکت کننده دوره پیشرفته</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">"روش های پاک ذهن کاملا متفاوت و موثر بود. نه تنها مشکل اصلی حل شد، بلکه یاد گرفتم چطور در سایر زمینه های زندگی هم خودکنترلی داشته باشم. واقعا زندگی ام متحول شده است."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">تماس با ما</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">سوالی دارید؟ ما اینجا هستیم تا کمک کنیم</p>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">نام شما</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">ایمیل</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">موضوع</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                <option>انتخاب کنید</option>
+                                <option>سوال درباره دوره ها</option>
+                                <option>مشکل در خرید</option>
+                                <option>پشتیبانی فنی</option>
+                                <option>سایر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">پیام شما</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-bold hover:bg-blue-500 transition">ارسال پیام</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-bold text-secondary mb-6">اطلاعات تماس</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">آدرس</h4>
+                                    <p class="text-gray-600">تهران، خیابان ولیعصر، پلاک ۱۲۳۴، طبقه ۵</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">تلفن</h4>
+                                    <p class="text-gray-600">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                                    <p class="text-gray-600">۰۹۱۲-۱۲۳-۴۵۶۷</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">ایمیل</h4>
+                                    <p class="text-gray-600">info@pakzehn.ir</p>
+                                    <p class="text-gray-600">support@pakzehn.ir</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">ساعات کاری</h4>
+                                    <p class="text-gray-600">شنبه تا چهارشنبه: ۹ صبح تا ۵ بعدازظهر</p>
+                                    <p class="text-gray-600">پنجشنبه: ۹ صبح تا ۱ بعدازظهر</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-3">ما را در شبکه های اجتماعی دنبال کنید</h4>
+                            <div class="flex space-x-3 space-x-reverse">
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary hover:bg-opacity-20 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary hover:bg-opacity-20 transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary hover:bg-opacity-20 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary hover:bg-opacity-20 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-md mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-secondary">ورود به حساب کاربری</h3>
+                    <button id="close-login-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="login-email" class="block text-gray-700 font-medium mb-2">ایمیل</label>
+                        <input type="email" id="login-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="login-password" class="block text-gray-700 font-medium mb-2">رمز عبور</label>
+                        <input type="password" id="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember-me" class="w-4 h-4 text-accent rounded focus:ring-accent">
+                            <label for="remember-me" class="mr-2 text-gray-700">مرا به خاطر بسپار</label>
+                        </div>
+                        <a href="#forgot-password" class="text-accent hover:underline">فراموشی رمز عبور؟</a>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-bold hover:bg-blue-500 transition mb-4">ورود</button>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-600">حساب کاربری ندارید؟ <a href="#register" class="text-accent font-bold hover:underline">ثبت نام کنید</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-md mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-secondary">ثبت نام جدید</h3>
+                    <button id="close-register-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form>
+                    <div class="mb-4">
+                        <label for="register-name" class="block text-gray-700 font-medium mb-2">نام کامل</label>
+                        <input type="text" id="register-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="register-email" class="block text-gray-700 font-medium mb-2">ایمیل</label>
+                        <input type="email" id="register-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="register-password" class="block text-gray-700 font-medium mb-2">رمز عبور</label>
+                        <input type="password" id="register-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="register-confirm-password" class="block text-gray-700 font-medium mb-2">تکرار رمز عبور</label>
+                        <input type="password" id="register-confirm-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <input type="checkbox" id="terms" class="w-4 h-4 text-accent rounded focus:ring-accent">
+                        <label for="terms" class="mr-2 text-gray-700">با <a href="#" class="text-accent hover:underline">قوانین و شرایط</a> موافقم</label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-bold hover:bg-blue-500 transition mb-4">ثبت نام</button>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-600">قبلا ثبت نام کرده اید؟ <a href="#login" class="text-accent font-bold hover:underline">وارد شوید</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Panel Modal -->
+    <div id="user-panel-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-4xl mx-4">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Sidebar -->
+                <div class="lg:w-1/4 bg-gray-100 p-4 rounded-r-lg">
+                    <div class="flex flex-col items-center mb-6">
+                        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-2xl mb-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="font-bold text-secondary">علی محمدی</h4>
+                        <p class="text-sm text-gray-600">عضو از: ۱۴۰۲/۰۳/۱۵</p>
+                    </div>
+                    
+                    <nav class="space-y-2">
+                        <a href="#" class="flex items-center p-3 rounded-lg bg-primary text-white">
+                            <i class="fas fa-tachometer-alt ml-2"></i>
+                            <span>داشبورد</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-200">
+                            <i class="fas fa-book ml-2"></i>
+                            <span>دوره های من</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-200">
+                            <i class="fas fa-chart-line ml-2"></i>
+                            <span>پیشرفت من</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-200">
+                            <i class="fas fa-cog ml-2"></i>
+                            <span>تنظیمات حساب</span>
+                        </a>
+                        <a href="#" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-200">
+                            <i class="fas fa-sign-out-alt ml-2"></i>
+                            <span>خروج</span>
+                        </a>
+                    </nav>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="lg:w-3/4 p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-secondary">داشبورد کاربری</h3>
+                        <button id="close-user-panel-modal" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary">دوره فعال</h4>
+                            </div>
+                            <p class="text-gray-600 mb-2">دوره پیشرفته کنترل ذهن</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">۶۵% تکمیل شده</p>
+                        </div>
+                        
+                        <div class="bg-light p-4 rounded-lg">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mr-3">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary">روزهای پاک</h4>
+                            </div>
+                            <p class="text-3xl font-bold text-primary mb-2">۴۲ روز</p>
+                            <p class="text-sm text-gray-500">رکورد قبلی: ۲۸ روز</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold text-secondary mb-4">تمرینات امروز</h4>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h5 class="font-medium text-gray-800">تمرین تنفس عمیق</h5>
+                                <p class="text-sm text-gray-600">۵ دقیقه تمرین تنفس دیافراگمی</p>
+                            </div>
+                            <span class="text-sm text-green-600">تکمیل شده</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-3">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h5 class="font-medium text-gray-800">فعالیت بدنی</h5>
+                                <p class="text-sm text-gray-600">۳۰ دقیقه پیاده روی یا ورزش</p>
+                            </div>
+                            <span class="text-sm text-blue-600">در حال انجام</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 mr-3">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h5 class="font-medium text-gray-800">مطالعه روزانه</h5>
+                                <p class="text-sm text-gray-600">خواندن یک فصل از کتاب همراه</p>
+                            </div>
+                            <span class="text-sm text-gray-600">شروع نشده</span>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold text-secondary mb-4">پیشنهاد امروز</h4>
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-lg border border-primary border-opacity-30">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-secondary mb-2">وقتی وسوسه می شوید...</h5>
+                                <p class="text-gray-700">امروز اگر با وسوسه مواجه شدید، به جای تسلیم شدن، ۱۰ بار بشین پاشو انجام دهید. این کار هم انرژی منفی را تخلیه می کند و هم ذهن شما را منحرف می کند. سپس یک لیوان آب خنک بنوشید و به پیاده روی کوتاهی بروید.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 space-x-reverse mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-brain text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">پاک ذهن</h3>
+                    </div>
+                    <p class="opacity-90 mb-4">پاک ذهن با ارائه راهکارهای علمی و عملی به شما کمک می کند تا از اعتیاد به پورن و خودارضایی رها شوید و زندگی سالم و شادابی داشته باشید.</p>
+                    <div class="flex space-x-3 space-x-reverse">
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">لینک های سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="opacity-90 hover:opacity-100 hover:underline">صفحه اصلی</a></li>
+                        <li><a href="#about" class="opacity-90 hover:opacity-100 hover:underline">درباره ما</a></li>
+                        <li><a href="#courses" class="opacity-90 hover:opacity-100 hover:underline">دوره ها</a></li>
+                        <li><a href="#services" class="opacity-90 hover:opacity-100 hover:underline">خدمات</a></li>
+                        <li><a href="#contact" class="opacity-90 hover:opacity-100 hover:underline">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">خدمات ما</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-90 hover:opacity-100 hover:underline">مشاوره فردی</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100 hover:underline">جلسات گروهی</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100 hover:underline">اپلیکیشن همراه</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100 hover:underline">منابع آموزشی</a></li>
+                        <li><a href="#" class="opacity-90 hover:opacity-100 hover:underline">پشتیبانی ۲۴ ساعته</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">خبرنامه</h4>
+                    <p class="opacity-90 mb-4">با عضویت در خبرنامه، از آخرین مقالات و دوره های ما مطلع شوید.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="ایمیل شما" class="px-4 py-2 rounded-r-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-accent px-4 py-2 rounded-l-lg hover:bg-blue-500 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-6 border-t border-white border-opacity-20 flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-90 text-sm mb-4 md:mb-0">© ۱۴۰۲ تمام حقوق برای پاک ذهن محفوظ است.</p>
+                <div class="flex space-x-6 space-x-reverse text-sm">
+                    <a href="#" class="opacity-90 hover:opacity-100 hover:underline">قوانین و مقررات</a>
+                    <a href="#" class="opacity-90 hover:opacity-100 hover:underline">حریم خصوصی</a>
+                    <a href="#" class="opacity-90 hover:opacity-100 hover:underline">سوالات متداول</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Modal Toggles
+        const loginModal = document.getElementById('login-modal');
+        const registerModal = document.getElementById('register-modal');
+        const userPanelModal = document.getElementById('user-panel-modal');
+        
+        // For demo purposes, we'll simulate login/register actions
+        document.querySelectorAll('a[href="#login"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.classList.remove('hidden');
+            });
+        });
+        
+        document.querySelectorAll('a[href="#register"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                registerModal.classList.remove('hidden');
+            });
+        });
+        
+        document.querySelectorAll('a[href="#user-panel"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                userPanelModal.classList.remove('hidden');
+            });
+        });
+        
+        // Close Modals
+        document.getElementById('close-login-modal').addEventListener('click', () => {
+            loginModal.classList.add('hidden');
+        });
+        
+        document.getElementById('close-register-modal').addEventListener('click', () => {
+            registerModal.classList.add('hidden');
+        });
+        
+        document.getElementById('close-user-panel-modal').addEventListener('click', () => {
+            userPanelModal.classList.add('hidden');
+        });
+        
+        // Close modals when clicking outside
+        [loginModal, registerModal, userPanelModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Form submissions (prevent default for demo)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('برای نمایش دمو، فرم ارسال نشد. در نسخه واقعی این فرم ها کار خواهند کرد.');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (['#login', '#register', '#user-panel', '#course1', '#course2', '#course3', '#all-courses', '#forgot-password'].includes(anchor.getAttribute('href'))) {
+                return;
+            }
+            
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

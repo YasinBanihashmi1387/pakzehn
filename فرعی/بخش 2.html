@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی آنلاین ما</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .user-panel {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .user-panel.active {
+            max-height: 500px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <i class="fas fa-graduation-cap text-3xl text-blue-200"></i>
+                    <h1 class="text-2xl font-bold">آکادمی آنلاین ما</h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-white hover:text-blue-200 font-medium">صفحه اصلی</a>
+                    <a href="#about" class="nav-link text-white hover:text-blue-200 font-medium">درباره ما</a>
+                    <a href="#services" class="nav-link text-white hover:text-blue-200 font-medium">خدمات ما</a>
+                    <a href="#courses" class="nav-link text-white hover:text-blue-200 font-medium">دوره های ما</a>
+                    <a href="#contact" class="nav-link text-white hover:text-blue-200 font-medium">تماس با ما</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button id="user-btn" class="bg-white text-blue-800 px-4 py-2 rounded-lg font-medium hover:bg-blue-100 transition">
+                        <i class="fas fa-user mr-2"></i>ورود / ثبت نام
+                    </button>
+                    <button class="md:hidden text-white" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-white hover:text-blue-200">صفحه اصلی</a>
+                    <a href="#about" class="text-white hover:text-blue-200">درباره ما</a>
+                    <a href="#services" class="text-white hover:text-blue-200">خدمات ما</a>
+                    <a href="#courses" class="text-white hover:text-blue-200">دوره های ما</a>
+                    <a href="#contact" class="text-white hover:text-blue-200">تماس با ما</a>
+                </div>
+            </div>
+            
+            <!-- User Panel -->
+            <div class="user-panel bg-white rounded-lg mt-4 shadow-lg" id="user-panel">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- Login Form -->
+                    <div class="w-full md:w-1/2 p-4 border border-blue-100 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">ورود به حساب کاربری</h3>
+                        <form id="login-form">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="login-email">ایمیل</label>
+                                <input type="email" id="login-email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="login-password">رمز عبور</label>
+                                <input type="password" id="login-password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">ورود</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Register Form -->
+                    <div class="w-full md:w-1/2 p-4 border border-blue-100 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">ثبت نام جدید</h3>
+                        <form id="register-form">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="register-name">نام کامل</label>
+                                <input type="text" id="register-name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="register-email">ایمیل</label>
+                                <input type="email" id="register-email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="register-password">رمز عبور</label>
+                                <input type="password" id="register-password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">ثبت نام</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">یادگیری آنلاین با کیفیت بالا</h2>
+                <p class="text-xl mb-8 text-blue-100">به آکادمی آنلاین ما خوش آمدید. دوره های تخصصی با بهترین اساتید را تجربه کنید.</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#courses" class="bg-white text-blue-800 px-6 py-3 rounded-lg font-bold hover:bg-blue-100 transition">مشاهده دوره ها</a>
+                    <a href="#about" class="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-800 transition">درباره ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Learning" class="rounded-xl shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">درباره آکادمی ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About Us" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">چرا ما را انتخاب کنید؟</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        آکادمی آنلاین ما با بیش از 10 سال تجربه در زمینه آموزش آنلاین، با بهره گیری از بهترین اساتید و متدهای آموزشی روز دنیا، محیطی ایده آل برای یادگیری مهارت های جدید فراهم کرده است. ما به کیفیت آموزش و رضایت دانشجویان خود اهمیت ویژه ای می دهیم.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">اساتید مجرب</h4>
+                                <p class="text-gray-600">با بهترین اساتید هر حوزه همکاری می کنیم</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">پشتیبانی 24 ساعته</h4>
+                                <p class="text-gray-600">همیشه در کنار شما هستیم</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900">گواهینامه معتبر</h4>
+                                <p class="text-gray-600">مدرک معتبر پس از اتمام دوره</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">خدمات ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">دوره های برنامه نویسی</h3>
+                    <p class="text-gray-600">آموزش برنامه نویسی از مبتدی تا پیشرفته با جدیدترین تکنولوژی های روز دنیا</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">دوره های بازاریابی</h3>
+                    <p class="text-gray-600">آموزش دیجیتال مارکتینگ، سئو و بازاریابی شبکه های اجتماعی</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">دوره های طراحی</h3>
+                    <p class="text-gray-600">آموزش طراحی گرافیک، UI/UX و طراحی وب با جدیدترین ابزارها</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">دوره های زبان</h3>
+                    <p class="text-gray-600">آموزش زبان انگلیسی و سایر زبان ها با متدهای روز دنیا</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-business-time text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">مشاوره شغلی</h3>
+                    <p class="text-gray-600">مشاوره تخصصی برای ورود به بازار کار و پیشرفت شغلی</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">گواهینامه معتبر</h3>
+                    <p class="text-gray-600">اعطای گواهینامه معتبر بین المللی پس از اتمام دوره ها</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">دوره های آموزشی</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto
+</html>
